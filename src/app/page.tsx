@@ -86,7 +86,6 @@ export default function Home() {
         return
       }
     }
-    // allow posting with just image or just text
     const { error } = await supabase.from('posts').insert([{ body: message, image_url: imageUrl }])
     if (!error) {
       setMessage('')
