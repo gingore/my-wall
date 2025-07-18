@@ -101,18 +101,18 @@ export default function Home() {
       <div style={{position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundImage: "url('/neopolitan.jpg')", backgroundRepeat: 'repeat', backgroundPosition: 'center', backgroundSize: 'cover', opacity: 0.5, zIndex: -10}}></div>
       <div className="relative flex flex-col md:flex-row justify-center items-start w-full px-2 md:px-0">
         <div className="w-full md:w-4/5 bg-[#fdf9fb] rounded-2xl shadow-lg p-4 md:p-10 mt-4 md:mt-10 border border-[#a47d6d]">
-          <div className="w-full bg-[#f8ced5] rounded-lg mb-4 md:mb-8">
-            <h1 className="text-2xl md:text-4xl font-bold text-left px-3 md:px-6 py-3 md:py-4 text-[#a47d6d]">˚₊‧꒰ა  Lena&apos;s Wall ໒꒱ ‧₊˚</h1>
+          <div className="w-full bg-[#f8ced5] rounded-lg mb-4 md:mb-8 flex justify-center items-center">
+            <h1 className="text-2xl md:text-4xl font-bold text-center px-3 md:px-6 py-3 md:py-4 text-[#a47d6d]">˚₊‧꒰ა  Lena&apos;s Wall ໒꒱ ‧₊˚</h1>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-start">
-            <div className="sticky top-4 md:top-12 flex flex-col items-center">
-              <ProfilePic className="w-32 h-32 md:w-56 md:h-56 rounded-xl border !border-[#a47d6d]" />
-              <div className="w-full flex flex-col items-center gap-2 md:gap-4 mt-2 md:mt-4">
-                <div className="w-full border border-[#a47d6d] rounded-lg p-2 md:p-3 bg-white mb-2">
-                  <h2 className="font-semibold text-xl md:text-3xl mb-0 text-left">Lena Tran</h2>
-                  <div className="text-xs md:text-sm text-left py-1 md:py-2">03 | she/her | ISFJ</div>
+          <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center md:items-start">
+            <div className="w-full flex flex-col items-center mb-4 md:mb-0">
+              <ProfilePic className="w-48 h-48 md:w-56 md:h-56 rounded-xl border !border-[#a47d6d] mx-auto" />
+              <div className="w-full flex flex-col items-center gap-2 md:gap-4 mt-2 md:mt-4 text-center">
+                <div className="w-full border border-[#a47d6d] rounded-lg p-2 md:p-3 bg-white mb-2 text-center">
+                  <h2 className="font-semibold text-xl md:text-3xl mb-0">Lena Tran</h2>
+                  <div className="text-xs md:text-sm py-1 md:py-2">03 | she/her | ISFJ</div>
                 </div>
-                <div className="w-full border border-[#a47d6d] rounded-lg p-2 md:p-3 bg-white">
+                <div className="w-full border border-[#a47d6d] rounded-lg p-2 md:p-3 bg-white text-center">
                   <div className="font-bold mb-0">Networks</div>
                   <div className="text-xs md:text-sm mb-0">UT Arlington Alumna</div>
                   <div className="font-bold mt-2 md:mt-4 mb-0">Current City</div>
@@ -120,7 +120,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex-1 space-y-4 md:space-y-6">
+            <div className="flex-1 space-y-4 md:space-y-6 px-0 md:px-4 flex flex-col items-center md:items-start">
               <div className="space-y-2 md:space-y-3">
                 <Textarea
                   maxLength={280}
@@ -129,10 +129,10 @@ export default function Home() {
                   placeholder="What's on your mind?"
                   className="min-h-[80px] md:min-h-[120px] text-base md:text-xl p-3 md:p-4 border border-[#a47d6d] focus:border-[#a47d6d] focus:ring-[#a47d6d] focus:ring-1 placeholder:text-[#a47d6d]"
                 />
-                <div className="flex justify-between items-center">
+                <div className="flex justify-center md:justify-between items-center w-full">
                   <span className="text-xs md:text-sm">{280 - message.length} characters left</span>
                 </div>
-                <div className="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-3 mt-2">
+                <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 md:gap-3 mt-2 w-full">
                   <div className="flex items-center gap-2">
                     <Button
                       type="button"
@@ -174,9 +174,9 @@ export default function Home() {
                 <span className="text-xs md:text-sm mt-1 block">Supported: PNG, JPG, GIF, up to 5MB</span>
                 {errorMsg && <div className="text-red-500 text-xs md:text-sm mt-2">{errorMsg}</div>}
               </div>
-              <div className="space-y-2 md:space-y-4">
+              <div className="space-y-2 md:space-y-4 w-full flex flex-col items-center">
                 {posts.map((post) => (
-                  <div key={post.id} className="border border-[#a47d6d] rounded-xl p-2 md:p-4 shadow-sm bg-white">
+                  <div key={post.id} className="border border-[#a47d6d] rounded-xl p-2 md:p-4 shadow-sm bg-white w-full max-w-md">
                     <p className="text-base md:text-lg">{post.body}</p>
                     {post.image_url && (
                       <div className="mt-2">
