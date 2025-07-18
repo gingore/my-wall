@@ -105,14 +105,14 @@ export default function Home() {
             <h1 className="text-2xl md:text-4xl font-bold text-center px-3 md:px-6 py-3 md:py-4 text-[#a47d6d]">˚₊‧꒰ა  Lena&apos;s Wall ໒꒱ ‧₊˚</h1>
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center md:items-start">
-            <div className="w-full flex flex-col items-center mb-4 md:mb-0">
-              <ProfilePic className="w-48 h-48 md:w-56 md:h-56 rounded-xl border !border-[#a47d6d] mx-auto" />
-              <div className="w-full flex flex-col items-center gap-2 md:gap-4 mt-2 md:mt-4 text-center">
-                <div className="w-full border border-[#a47d6d] rounded-lg p-2 md:p-3 bg-white mb-2 text-center">
+            <div className="w-full md:w-auto flex flex-col items-center mb-4 md:mb-0">
+              <ProfilePic className="w-48 h-48 md:w-56 md:h-56 rounded-xl border !border-[#a47d6d] mx-auto md:mx-0" />
+              <div className="w-full flex flex-col items-center gap-2 md:gap-4 mt-2 md:mt-4 text-center md:text-left">
+                <div className="w-full border border-[#a47d6d] rounded-lg p-2 md:p-3 bg-white mb-2 text-center md:text-left">
                   <h2 className="font-semibold text-xl md:text-3xl mb-0">Lena Tran</h2>
                   <div className="text-xs md:text-sm py-1 md:py-2">03 | she/her | ISFJ</div>
                 </div>
-                <div className="w-full border border-[#a47d6d] rounded-lg p-2 md:p-3 bg-white text-center">
+                <div className="w-full border border-[#a47d6d] rounded-lg p-2 md:p-3 bg-white text-center md:text-left">
                   <div className="font-bold mb-0">Networks</div>
                   <div className="text-xs md:text-sm mb-0">UT Arlington Alumna</div>
                   <div className="font-bold mt-2 md:mt-4 mb-0">Current City</div>
