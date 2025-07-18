@@ -53,7 +53,7 @@ export default function Home() {
   }, [])
 
   const handleSubmit = async () => {
-    if (!message.trim()) return 
+    if (!message.trim() && !image) return // require at least text or image
     setLoading(true)
     setErrorMsg('')
     let imageUrl = ''
@@ -86,6 +86,7 @@ export default function Home() {
         return
       }
     }
+    // allow posting with just image or just text
     const { error } = await supabase.from('posts').insert([{ body: message, image_url: imageUrl }])
     if (!error) {
       setMessage('')
